@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Copy, Edit3, Star, Play, ChevronDown, Check } from "lucide-react"
 import type { Prompt, Provider, Settings, HistoryEntry } from "../lib/types"
-import { extractVariables, buildFinalPrompt, MODELS, modelsByProvider, runPrompt, findModel } from "../lib/api"
+import { extractVariables, buildFinalPrompt, modelsByProvider, runPrompt } from "../lib/api"
 import { generateId } from "../lib/utils"
 
 type Props = {
