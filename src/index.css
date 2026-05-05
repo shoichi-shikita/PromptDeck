@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== テーマ変数 ===== */
+
+/* デフォルト（ダーク） */
+:root,
+:root[data-theme="dark"] {
+  --bg: #1a1a18;
+  --surface-1: #1f1f1d;
+  --surface-2: #252522;
+  --surface-3: #2d2d29;
+  --text: #ededea;
+  --text-2: #a8a89e;
+  --text-3: #66665d;
+  --border: #2a2a26;
+  --accent: #6B9BD1;
+  --accent-hover: #5a8bc1;
+  --ink: #ededea;
+}
+
+/* ライト */
+:root[data-theme="light"] {
+  --bg: #f7f7f5;
+  --surface-1: #fcfcfa;
+  --surface-2: #f0f0ed;
+  --surface-3: #e5e5e0;
+  --text: #1a1a18;
+  --text-2: #555550;
+  --text-3: #909088;
+  --border: #e0e0db;
+  --accent: #4a7eb8;
+  --accent-hover: #3a6ea8;
+  --ink: #1a1a18;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* スクロールバー */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-3);
+}
+
+/* 共通 */
+kbd {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* line-clamp（古いブラウザ用フォールバック） */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
