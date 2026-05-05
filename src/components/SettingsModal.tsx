@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { X, Eye, EyeOff } from "lucide-react"
 import type { Settings, Provider } from "../lib/types"
-import { MODELS, modelsByProvider } from "../lib/api"
+import {modelsByProvider } from "../lib/api"
 
 type Props = {
   open: boolean
